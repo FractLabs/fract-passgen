@@ -5,8 +5,7 @@ use rand::random_range;
 //use std::io::{self, BufRead, Write};
 //use std::thread;
 //use std::time::Duration;
-//use std::fs::File;
-//use std::fs::{File, OpenOptions};
+
 
 fn main() {
     let mut times: i32 = 0;
