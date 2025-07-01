@@ -5,7 +5,7 @@ use rand::random_range;
 //use std::io::{self, BufRead, Write};
 //use std::thread;
 //use std::time::Duration;
-use std::fs;
+//use std::fs;
 
 
 fn main() {
@@ -36,7 +36,7 @@ fn main() {
         //        thread::sleep(Duration::from_secs(1));
 
         if times >= pass_length {
-            fs::write("senhas.txt", &final_pass).expect("Error on write");
+//            fs::write("senhas.txt", &final_pass).expect("Error on write");
             println!("{}", final_pass);
             break;
         }
