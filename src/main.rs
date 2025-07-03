@@ -1,15 +1,46 @@
 mod passgen;
+use eframe::{egui, NativeOptions};
 
-fn main() {
-    
-    let pass_length: i32 = 9;
 
-    let uppercase_letters: bool = true;
-    let letters: bool = true;
-    let numbers: bool = true;
-    let special_characters: bool = true;
 
-    let final_pass = passgen::passgen(pass_length, uppercase_letters, letters, numbers, special_characters);
+struct PassGenApp {
+    pass_length: i32,
+    uppercase_letters: bool,
+    letters: bool,
+    numbers: bool,
+    special_characters: bool,
+   }
+   
+   impl Default for PassGenApp {
+       fn default() -> Self {
 
-    println!("{}", final_pass);
+           Self {
+           pass_length: 9,
+           uppercase_letters: true,
+           letters: true,
+           numbers: true,
+           special_characters: true,
+       }
+   }
+}
+
+impl eframe::App for PassGenApp {
+    fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
+            egui::CentralPanel::default().show(ctx, |ui| {
+                ui.label("Password config");
+            });
+    }
+}
+
+fn main() -> eframe::Result {
+    let options = NativeOptions::default();
+
+    eframe::run_native("PassGen",
+    options,
+    Box::new(|_cc| Ok(Box::new(PassGenApp::default()))),
+    )?;
+
+
+
+    Ok(())
 }
