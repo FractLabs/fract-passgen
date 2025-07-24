@@ -1,3 +1,4 @@
 target/
 fract-passgen-core/target/
-fract-passgen/target/
+fract-passgen-app/target/
+fract-passgen-app/main.backup
