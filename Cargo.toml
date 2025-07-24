@@ -1,12 +1,5 @@
-[package]
-name = "passgen"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]
-eframe = "0.31.1"
-egui = "0.31.1"
-rand = "0.9.1"
-
-
-
+[workspace]
+members = [
+    "fract-passgen",
+    "fract-passgen-core"
+]

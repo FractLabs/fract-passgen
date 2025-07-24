@@ -1,0 +1,11 @@
+[package]
+name = "fract-passgen"
+version = "1.0.0"
+edition = "2024"
+
+[dependencies]
+eframe = "0.31.1"
+egui = "0.31.1"
+fract_passgen_core = { path = "../fract-passgen-core" }
+
+

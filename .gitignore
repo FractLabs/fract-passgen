@@ -1,4 +1,3 @@
-/target
-numbers.txt
-senhas.txt
-main.backup
+target/
+fract-passgen-core/target/
+fract-passgen/target/
