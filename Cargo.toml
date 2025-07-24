@@ -1,5 +1,5 @@
 [workspace]
 members = [
-    "fract-passgen",
+    "fract-passgen-app",
     "fract-passgen-core"
 ]
